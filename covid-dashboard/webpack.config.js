@@ -55,7 +55,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'English for Kids',
+      title: 'Covid Dashboard',
+      publicPath: 'src/index.html',
     }),
     // new FaviconsWebpackPlugin({
     //   logo: './src/assets/images/baby-boy.png',
