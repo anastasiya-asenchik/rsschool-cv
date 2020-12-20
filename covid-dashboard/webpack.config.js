@@ -49,6 +49,7 @@ module.exports = {
     ],
   },
   output: {
+    publicPath: '',
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -56,7 +57,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Covid Dashboard',
-      publicPath: 'src/index.html',
+      template: 'src/index.html',
     }),
     // new FaviconsWebpackPlugin({
     //   logo: './src/assets/images/baby-boy.png',
