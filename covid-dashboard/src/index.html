@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" href="./assets/style.scss"> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../src/assets/images/coronavirus.png" />
     <title>Covid dashboard</title>
-</head>
-<body>
-<div class="wrapper__table ">
-    <!-- <label for="search">Введите страну: </д><input id="search" type="search"> -->
-    <div class="table all">
-        <span class="table__country">За все время в мире:</span>
-        <div class="table__info">
-    <div class="wrapper__table_column">
-        <span class="column__label cases">Заражено:</span>
-        <span class="column__numb cases_numb">452222</span>
-    </div>
-    <div class="wrapper__table_column">
-        <span class="column__label deaths">Летальных исходов:</span>
-        <span class="column__numb deaths_numb">452222</span>
-    </div>
-    <div class="wrapper__table_column recov">
-        <span class="column__label recovered">Выздоровило:</span>
-        <span class="column__numb recovered_numb">452222</span>
-    </div>
+  </head>
+  <body>
+    <header class="header">
+      <span>COVID-19 Dashboard</span>
+      
+    </header>
+    <main class="main">
+      <div class="global-cases__container border background">
+        <span class="name-container">Global Cases</span>
+        <span class="cases-amount"></span>
+      </div>
+      <div class="country-cases border background">
+        <div class="block-title">
+          <span class="title">Cases by Country/Region/Sovereignty</span>
+        </div>
+        <div class="country-cases-container">
+            <div class="block-navigation">  <button class="global btn">Global</button>
+          <button class="today btn">Today</button>
+          <button class="global100 btn">Global %100K</button>
+          <button class="today100 btn">Today%100K</button>
 </div>
-</div>
-<div class="table__nav">
-    <button class="btn__nav__table btn__nav_all">За все время</button>
-    <button class="btn__nav__table btn__nav_today">Сегодня</button>
+        </div>
+        </div>
+          </div>
+        </div>
+      </div>
+      <div class="map"></div>
+      <div class="second-table-container">
+        <div class="table-block border background">
+          <div class="block-title">
+            <span class="global-deaths">Global Deaths</span>
+            <span class="deaths-amount"></span>
+          </div>
+          <div class="block-content">
+          </div>
+          <div class="block-navigation"></div>
+        </div>
+        <div class="table-block border background">
+          <div class="block-title">
+            <span>US</span>
+            <span>Deaths, Recovered</span>
+          </div>
+          <div class="block-content-state">
+            <div class="block-content-row-state"></div>
 
-</div>
-</div>
-
-</body>
+          </div>
+      </div>
+      <div class="graphic__container"></div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="links">
+          <a href="https://github.com/anastasiya-asenchik">
+            <img src="../src/assets/images/github.png" alt="github" />
+          </a>
+          <a href="https://github.com/JenkJS">
+            <img src="../src/assets/images/github.png" alt="github" />
+          </a>
+          <a href="https://rs.school/js/">
+            <img src="../src/assets/images/rs_school_js.svg" alt="rsSchool" />
+          </a>
+        </p>
+        <p>
+          <span>©2020, Covid Dashboard</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

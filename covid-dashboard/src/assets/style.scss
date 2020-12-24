@@ -1,90 +1,200 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-.wrapper__table{
-    margin: 25px auto;
-    background-color: brown;
-    width: 31.25rem;
-    text-align: center;
-}
-.table__country{
-    font-size: 30px;
-}
-.table__info{
-    width: 100%;
-    height: 100px;
-    display:  flex;
-    justify-content: space-evenly;
-}
-.wrapper__table_column{
+  }
+  
+  body {
+    margin: 0 auto;
+    font-family: "Inter", Verdana, sans-serif;
+    letter-spacing: 0;
+    color: #bdbdbd;
+    background-color: #000;
+  }
+  
+  .header {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.wrapper__table_column.recov.hidden{
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.column__label{
-    font-size: 25px;
-}
-.column__numb{
-    font-size: 20px;
-}
-.table__nav{
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .border {
+    border: 1px solid #363636;
+  }
+  
+  .background {
+    background: #222;
+  }
+  
+  .main {
     display: flex;
-    // justify-content: ;
-}
-.btn__nav__table{
-    border: none;
-    outline: none;
-    background-color: brown;
-    cursor: pointer;
-    margin: 5px 10px;
-    width: fit-content;
-    height: 100%;
-}
-.btn__nav__table:hover{
-    background-color: burlywood;
-    border: burlywood;
-    width: fit-content;
-
-}
-// .table__global_info{
-//     display: flex;
-//     flex-direction: column;
-//     color: black;
-// }
-// span{
-//     border-bottom: 1px solid teal;
-// }
-
-// .table__global_info{
-//     display: none;
-//     // display: flex;
-//     flex-direction: column;
-//     color: black;
-// }
-// .table__global_info.active{
-//     // display: none;
-//     display: flex;
-//     flex-direction: column;
-//     color: black;
-// }
-// .table__country_info{
-//     display: none;
-//     // display: flex;
-//     flex-direction: column;
-//     color: thistle;
-// }
-// .table__country_info.active{
-//     display: none;
-//     display: flex;
-//     flex-direction: column;
-//     color: thistle;
-//     height: 250px;
-// overflow: scroll;}
+    flex-wrap: wrap;
+    overflow: hidden;
+  
+    .global-cases__container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    //   flex-direction: column;
+      justify-content: center;
+      margin: 10px;
+  
+      .cases-amount {
+        color: #e60000;
+      }
+      .name-container{
+          margin-right: 20px
+      } ;
+    }
+  
+    .country-cases {
+      width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+        .block-navigation{
+            display: flex;
+            justify-content: center;
+        } 
+        .btn{
+            cursor: pointer;
+            outline: none;
+            border: 1px solid #363636;
+            margin-right: 10px;
+            color: #bdbdbd;
+            width: 100px;
+            background-color: #222;
+        }
+        .btn:hover{
+            color: #222;
+            background-color: #bdbdbd;
+        }
+      .block-title {
+        padding: .375rem;
+        text-align: center;
+  
+        .title {
+          letter-spacing: 0;
+          color: #bdbdbd;
+          font-family: "Avenir Next W01", "Avenir Next W00", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+          line-height: 1.5;
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+  
+      .country-cases-container {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 600px;
+  
+        .country-container {
+          cursor: pointer;
+          align-items: center;
+          margin: 0;
+          padding: 0 .375rem;
+          border-bottom: 1px solid #5c5c5c;
+          
+  
+          .country {
+            padding: 5px 0 5px 5px;
+            display: flex;
+            justify-content: space-around;
+  
+            .cases-amount {
+              color: #e60000;
+            }
+          }
+          img{
+              width: 25px;
+              height: 20px;
+          }
+        }
+      }
+    }
+  
+    .second-table-container {
+      display: flex;
+      margin: 5px;
+      
+  
+      .table-block {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        height: 635px;
+        overflow-y: auto;
+       overflow-x: hidden;
+  
+        .block-title{
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .block-content, .block-content-state {
+        
+          .block-content-row, .block-content-row-state {
+            cursor: pointer;
+            border-bottom: 1px solid #5c5c5c;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+        .deaths-amount{
+            color: #e60000;
+        }
+        .country-recovered__amount-state{
+            color: green;
+        }
+    }
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    min-height: 200px;
+    color: #999;
+  
+    .container {
+      padding: 35px 40px;
+      height: 100%;
+      width: calc(100% - 10px);
+  
+      .links {
+        flex-direction: row;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        color: #999;
+  
+        a {
+          padding: .5em;
+          outline: none;
+          text-decoration: none;
+        }
+  
+        img {
+          width: 30px;
+          height: 30px;
+          opacity: 0.5;
+  
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+  
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
